@@ -189,7 +189,8 @@ Both the Forward+ and Mobile :ref:`doc_internal_rendering_architecture_methods` 
 used with Direct3D 12.
 
 :ref:`doc_internal_rendering_architecture_core_shaders` are shared with the
-Vulkan renderer. Shaders are transpiled from GLSL to HLSL using
+Vulkan renderer. Shaders are converted from SPIR-V to DXIL (the binary formats that GLSL
+and HLSL are usually compiled to, respectively) using
 Mesa NIR (`more information <https://godotengine.org/article/d3d12-adventures-in-shaderland/>`__).
 This means you don't need to know HLSL to work on the Direct3D 12 renderer,
 although knowing the language's basics is recommended to ease debugging.
